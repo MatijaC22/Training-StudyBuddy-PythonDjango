@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+
+<div>
+    <form method="POST" action="">
+        {% csrf_token %} 
+        {{form.as_p}}
+        <!-- .as_p will wrap a paragraph so each part of a form will go in another line -->
+        <!-- neki token koji se mora poslati, stitenje od hakera(usera) ili tako neko govno -->
+        <input type="Submit" value="Submit">
+    </form>
+</div>
+
+{% endblock content %}
